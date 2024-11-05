@@ -1,0 +1,52 @@
+@import "src/styles/index";
+
+
+.nav_container {
+  position: absolute;
+  bottom: -115px;
+  right: calc(50% - 260px);
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+
+  .nav_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    font-size: 14px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    &.selected {
+      border: 1px solid $accent-color;
+    }
+
+    &.filled {
+      background-color: #4343ee;
+      color: white;
+      border-color: #4343ee;
+    }
+  }
+
+  > img {
+    align-self: center;
+    height: 16px;
+    cursor: pointer;
+
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  .arrow_left {
+    margin-right: 10px;
+  }
+
+  .arrow_right {
+    margin-left: 10px;
+  }
+}

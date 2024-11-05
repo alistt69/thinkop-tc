@@ -1,0 +1,24 @@
+@import "src/styles/index";
+
+.reset_btn {
+  justify-self: end;
+  background-color: transparent;
+  height: 48px;
+  width: 225px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: 1.5px solid $accent-color;
+  cursor: pointer;
+  transition: background-color .5s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media (max-width: 697px) {
+
+  .reset_btn {
+    justify-self: start;
+  }
+}

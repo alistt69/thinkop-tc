@@ -1,0 +1,85 @@
+@import "src/styles/index";
+
+.form {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 77.5px;
+  width: 100%;
+
+  .form_container {
+    position: relative;
+    padding: 15.5px 0 0;
+    margin-top: 20px;
+  }
+
+  .form_field {
+    width: 100%;
+    border: 1.05865px solid $secondary-color;
+    border-radius: 6.2px;
+    outline: 0;
+    font-size: 15.5px;
+    color: $primary-color;
+    padding: 15.5px;
+    background: transparent;
+    transition: all 0.2s;
+
+    &::placeholder {
+      font-size: 0;
+    }
+
+    &:placeholder-shown ~ .form_label {
+      font-size: 15.5px;
+      cursor: text;
+      top: 46%;
+      color: $secondary-color;
+    }
+
+    &.select_option {
+      &.form_field {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .form_area {
+    resize: none;
+    height: 139.5px;
+
+    &:placeholder-shown ~ .form_label {
+      font-size: 15.5px;
+      cursor: text;
+      top: 15%;
+      color: $secondary-color;
+    }
+  }
+
+  .form_label {
+    position: absolute;
+    top: 8.215px;
+    left: 12px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    transition: 0.2s;
+    background-color: white;
+    font-size: 13.175px;
+    color: $secondary-color;
+  }
+
+  .form_field:focus {
+    ~ .form_label {
+      position: absolute;
+      top: 8.37px;
+      display: block;
+      transition: 0.2s;
+      font-size: 13.95px;
+      color: $primary-color;
+    }
+
+    padding-bottom: 15.5px;
+    border-image-slice: 1;
+    border-color: $primary-color;
+    transform: scale(1.007);
+  }
+}

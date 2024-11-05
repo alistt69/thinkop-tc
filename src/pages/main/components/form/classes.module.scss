@@ -1,0 +1,19 @@
+.forms_container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 50px;
+  width: 100%;
+
+  .heading {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(338.5px, 1fr));
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 697px) {
+
+  .forms_container {
+    row-gap: 20px;
+  }
+}

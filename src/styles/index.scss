@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter%20Tight:wght@400;600&display=swap');
+@import "consts";
+@import "normalize";
+
+
+body {
+  height: 100vh;
+  padding-top: 100px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  color: $primary-color;
+  font-family: "Inter Tight", cursive;
+}
